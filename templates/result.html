@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Prediction Results</h1>
+    <p><strong>Daily Caloric Intake:</strong> {{ result.daily_caloric_intake }} kcal</p>
+    <p><strong>Daily Steps Goal:</strong> {{ result.daily_steps_goal }} steps</p>
+    <p><strong>Ideal Sleep Duration:</strong> {{ result.ideal_sleep_duration }} hours</p>
+    <h2>Recommendations</h2>
+    <p><strong>Diet Recommendation:</strong> {{ result.diet_recommendation }}</p>
+    <p><strong>Exercise Recommendation:</strong> {{ result.exercise_recommendation }}</p>
+    <a href="/">Back to Home</a>
+</body>
+</html>

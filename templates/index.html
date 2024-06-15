@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Health Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Health Predictor</h1>
+    <form action="/predict" method="post">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+        
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" name="height" required><br><br>
+        
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" name="weight" required><br><br>
+        
+        <label for="heartrate">Heart Rate:</label>
+        <input type="number" id="heart_rate" name="heartrate" required><br><br>
+        
+        <label for="systolic_bp">BP Systolic:</label>
+        <input type="number" id="systolic_bp" name="systolic_bp" required><br><br>
+        
+        <label for="diastolic_bp">BP Diastolic:</label>
+        <input type="number" id="diastolic_bp" name="diastolic_bp" required><br><br>
+        
+        <label for="diet">Current Diet:</label>
+        <select id="diet" name="diet" required>
+        <option value="low_carb">Low Carb</option>
+        <option value="vegetarian">Vegetarian</option>
+        <option value="balanced">Balanced</option>
+        <option value="high_protein">High Protein</option>
+        </select>
+        <br><br>
+        
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br><br>
+        
+        <label for="activity_level">Activity Level:</label>
+        <select id="activity_level" name="activity_level" required>
+            <option value="lightly_active">active</option>
+            <option value="moderately_active">Moderate</option>
+            <option value="sedentary">lightly_active</option>
+        </select><br><br>
+
+        <label for="alcohol_smoke_both">DO you Consume Alchohol/Cigarate/Both</label>
+        <select id="alcohol_smoke_both"name = "alcohol_smoke_both" required>
+            <option value="none">none</option>
+            <option value="alcohol">alchohol</option>
+            <option value="smoke">smoke</option>\
+            <option value="both">both</option>
+        </select><br><br>
+
+
+        <label for="stress">Stress Level</label>
+        <select id ="stress"name = "stress" required>
+            <option value="moderate">moderate</option>
+            <option value="low">low</option>
+            <option value="high">high</option>
+        </select><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
